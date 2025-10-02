@@ -2,183 +2,431 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-<title>Al-Qur’an Digital - Profesional</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Qur’an Digital Profesional</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;color:#e0e0e0;min-height:100vh;overflow-x:hidden;background:#0b0c1a;}
-#bg-video{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-2;filter:brightness(0.35);}
-body::before{content:'';position:fixed;width:100%;height:100%;background:radial-gradient(circle,rgba(0,0,0,0.7),rgba(11,12,26,0.9));z-index:-1;}
-.hero{display:flex;justify-content:center;align-items:flex-start;padding:15px 10px;}
-.hero-card{background:rgba(255,255,255,0.05);border-radius:15px;padding:15px 20px;width:95%;max-width:800px;text-align:center;backdrop-filter:blur(12px) saturate(180%);border:1px solid rgba(255,255,255,0.15);box-shadow:0 8px 20px rgba(0,0,0,0.5);}
-.hero-card h2{font-family:'Playfair Display',serif;font-size:1.6em;color:#00e5ff;text-shadow:0 0 8px rgba(0,229,255,0.6);}
-.hero-card h2 span{color:#FFD700;text-shadow:0 0 10px rgba(255,215,0,0.7);}
-.features{max-width:1100px;margin:25px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:0 20px 35px;}
-.feature-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:20px 10px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.5);transition: transform 0.3s, box-shadow 0.3s;cursor:pointer;}
-.feature-card:hover{transform: translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.7);}
-.feature-card i{font-size:2.2em;color:#00e5ff;margin-bottom:15px;}
-.feature-card h3{margin-bottom:10px;font-size:1.2em;font-weight:600;}
-.feature-card p{font-size:0.9em;color:#c0c0c0;}
-.tab-content{max-width:1000px;margin:0 auto;padding:20px;background:rgba(255,255,255,0.05);border-radius:15px;backdrop-filter:blur(12px);box-shadow:0 8px 20px rgba(0,0,0,0.5);display:none;color:#c0c0c0;transition:opacity 0.5s;position:relative;overflow-x:auto;}
-.tab-content.active{display:block;opacity:1;}
-.tab-content h2{color:#00e5ff;margin-bottom:15px;}
-.tab-content h2 span{color:#FFD700;}
-.tab-content p{line-height:1.7;margin-bottom:12px;}
-.tab-content table{width:100%;border-collapse:collapse;margin-top:10px;display:block;overflow-x:auto;}
-.tab-content th, .tab-content td{padding:10px;border:1px solid rgba(255,255,255,0.2);text-align:center;}
-.tab-content th{background:rgba(0,229,255,0.1);}
-.countdown{margin-top:10px;font-size:1.1em;color:#FFD700;font-weight:600;}
-.back-btn{position:absolute;top:15px;right:20px;background:rgba(255,255,255,0.05);color:#00e5ff;border:none;padding:8px 15px;border-radius:10px;cursor:pointer;transition:background 0.3s, color 0.3s;}
-.back-btn:hover{background:#00e5ff;color:#0b0c1a;}
-#demo{position:fixed;top:10px;right:10px;background:rgba(0,0,0,0.6);padding:5px 10px;border-radius:20px;font-size:12px;font-weight:bold;color:#ffffff;z-index:1000;}
-footer{background:rgba(5,5,30,0.9);color:#fff;text-align:center;padding:15px 10px;margin-top:40px;font-size:0.9em;}
-footer a{color:#00e5ff;text-decoration:none;margin:0 10px;}
-footer a:hover{color:#fff;}
-.about-page{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#0b0c1a;overflow-y:auto;z-index:2000;padding:30px;}
-.about-page.active{display:block;}
-.about-page h2{color:#00e5ff;margin-bottom:15px;}
-.about-page h2 span{color:#FFD700;}
-.about-page p{margin-bottom:15px;line-height:1.8;}
-.about-page ol{margin-left:20px;line-height:1.8;}
-.about-page .back-btn{position:relative;top:0;right:0;margin-bottom:20px;}
-@media(max-width:600px){.hero-card h2{font-size:1.4em;}.feature-card i{font-size:2em;}.feature-card h3{font-size:1.1em;}}
-@media(max-width:400px){.hero-card h2{font-size:1.2em;}.feature-card i{font-size:1.8em;}.feature-card h3{font-size:1em;}}
+:root {
+    --primary-color: #0b0c1a;
+    --card-bg: rgba(255,255,255,0.05);
+    --accent-color: #00e5ff;
+    --accent-dark: #009db3;
+    --text-color: #e0e0e0;
+    --text-muted: #c0c0c0;
+    --highlight-color: #FFD700;
+    --shadow-soft: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background: var(--primary-color);
+    color: var(--text-color);
+    min-height:100vh;
+}
+
+header {
+    background: var(--card-bg);
+    color: var(--accent-color);
+    padding:15px 20px;
+    text-align:center;
+    font-weight:700;
+    font-size:1.5rem;
+    backdrop-filter: blur(12px) saturate(180%);
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.header-title {
+    margin:0;
+}
+
+.header-creator {
+    font-size:0.65rem;
+    font-weight:400;
+    color: rgba(255,255,255,0.6);
+    margin-top:4px;
+    padding:2px 6px;
+    border-radius:6px;
+    background: rgba(0,0,0,0.2);
+}
+
+.hidden { display:none !important; }
+
+#searchBox, #ayahSearchBox {
+    margin: 20px 15px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 12px 18px;
+    display: flex;
+}
+
+#searchBox input, #ayahSearchBox input {
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:1rem;
+    padding:0;
+    background:transparent;
+    color: var(--text-color);
+}
+
+#surahList { padding:0 15px; }
+
+.surah-item {
+    background: var(--card-bg);
+    border-radius:12px;
+    margin-bottom:12px;
+    padding:15px 18px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.surah-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+.surah-num {
+    background: var(--accent-color);
+    color:#000;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:15px;
+    font-weight:700;
+}
+
+.surah-info strong { color: var(--accent-color); font-weight:600; }
+.surah-meta { font-size:0.8rem; color: var(--text-muted); margin-top:2px; }
+
+#surahDetail { display:none; padding:15px; }
+
+#detailHeader {
+    background: var(--card-bg);
+    color: var(--accent-color);
+    padding:12px 15px;
+    border-radius:12px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    backdrop-filter: blur(12px) saturate(180%);
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+#detailHeader h2 { margin:0; font-size:1.3rem; font-weight:700; line-height:1.2; flex-grow:1; margin-left:45px; }
+
+.ayah {
+    background: var(--card-bg);
+    border-radius:12px;
+    margin-bottom:15px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,0.15);
+    cursor:pointer;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s, border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+.ayah:hover { border-color: var(--accent-color); }
+
+.ayah.active {
+    background:#000;
+    color:#fff;
+    border-color: var(--highlight-color);
+    transform: scale(1.01);
+    box-shadow:0 0 10px rgba(255,255,255,0.2);
+}
+
+.ayah.active .ayah-ar {
+    color: var(--highlight-color);
+    text-shadow:0 0 5px var(--highlight-color),0 0 10px var(--highlight-color);
+    animation: shine-simple 1.5s infinite alternate;
+}
+
+@keyframes shine-simple {
+    from { opacity:0.8; text-shadow:0 0 5px var(--highlight-color);}
+    to { opacity:1; text-shadow:0 0 10px var(--highlight-color);}
+}
+
+.ayah-num {
+    background: var(--accent-color);
+    color:#000;
+    border-radius:6px;
+    padding:4px 10px;
+    margin-bottom:15px;
+    display:inline-block;
+    font-weight:600;
+}
+
+.ayah.active .ayah-num { background: var(--highlight-color); color:#000; }
+
+.ayah-ar {
+    font-family:'Scheherazade New',serif;
+    font-size:2.0rem;
+    line-height:2.8rem;
+    direction:rtl;
+    text-align:right;
+    margin:15px 0 20px 0;
+    color: var(--text-color);
+    font-weight:400;
+}
+
+.ayah-id {
+    font-size:0.9rem;
+    color: var(--text-muted);
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:15px;
+    margin-top:15px;
+    font-style:italic;
+    line-height:1.8;
+    font-weight:300;
+}
+
+.ayah.active .ayah-id {
+    color: #ccc;
+    border-top:1px solid rgba(255,255,255,0.3);
+}
+
+#playBtn {
+    margin:0 auto 15px auto;
+    padding:10px 20px;
+    background: var(--accent-color);
+    color:#000;
+    border:none;
+    border-radius:8px;
+    font-size:1rem;
+    cursor:pointer;
+    font-weight:600;
+    width:fit-content;
+    display:block;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s;
+}
+
+#playBtn:hover { background: var(--accent-dark); color:#fff; }
+
+#playBtn.pause {
+    background: var(--highlight-color);
+    color:#000;
+    box-shadow:0 0 0px var(--highlight-color);
+    transform:scale(1.02);
+}
+
+#backBtn {
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:0.5rem;
+    line-height:1;
+    cursor:pointer;
+    padding:0;
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-weight:700;
+    opacity:0.9;
+    transition:opacity 0.2s;
+}
+
+#backBtn:hover { opacity:1; }
+
+#audioPlayer {
+    width:100%;
+    margin-top:20px;
+    border-radius:8px;
+    filter: invert(10%) sepia(50%) saturate(1000%) hue-rotate(180deg) brightness(80%) contrast(90%);
+}
+
+/* Timer Sleep tanpa box, dengan label */
+#sleepTimerBox { margin-bottom:5px; }
+#sleepTimerBox label { display:block; margin-bottom:4px; font-size:0.8rem; color: var(--accent-color); font-weight:600; }
+#sleepTimerInputs { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+#sleepTimerInputs input { width:50px; text-align:center; border:none; border-radius:4px; padding:6px; background:#222; color:#fff; font-size:0.9rem; }
+#sleepTimerInputs button { padding:6px 12px; border:none; border-radius:6px; cursor:pointer; transition:0.3s; background: var(--accent-color); color:#000; }
+#sleepTimerInputs button.active { background: var(--highlight-color); color:#000; }
+#sleepTimerDisplay { display:block; margin-top:6px; font-size:0.85rem; color: var(--text-muted); }
+
 </style>
 </head>
 <body>
 
-<video autoplay muted loop id="bg-video">
-  <source src="assets/video/meteor.mp4" type="video/mp4">
-</video>
+<header>
+    <h1 class="header-title">Al-Qur’an Digital</h1>
+    <span class="header-creator">Dibuat dengan ❤️ oleh Khenenk Digital</span>
+</header>
 
-<section class="hero">
-  <div class="hero-card">
-    <h2>Selamat Datang di <span>Al-Quran Digital</span></h2>
-  </div>
-</section>
-
-<p class="tittle"> </p>
-<center>
-<p id="demo"><b>loading...</b></p>
-
-<section class="features">
-  <div class="feature-card" onclick="window.open('https://tiktokrj77-a11y.github.io/qaraa.io/', '_blank')">
-    <i class="fa-solid fa-book-quran"></i>
-    <h3>Al-Quran</h3>
-    <p>Baca seluruh Surah Alquran secara digital.</p>
-  </div>
-  <div class="feature-card" onclick="showTab('jadwal')">
-    <i class="fa-solid fa-clock"></i>
-    <h3>Jadwal Sholat</h3>
-    <p>Pantau jadwal sholat sesuai lokasi Anda.</p>
-  </div>
-  <div class="feature-card" onclick="showAbout()">
-    <i class="fa-solid fa-circle-info"></i>
-    <h3>Tentang</h3>
-    <p>Aplikasi dan pembuatnya.</p>
-  </div>
-</section>
-
-<div id="jadwal" class="tab-content">
-  <button class="back-btn" onclick="closeTab()">Kembali</button>
-  <h2>Jadwal Sholat Hari Ini</h2>
-  <table>
-    <tr><th>Shubuh</th><td id="shubuh">–</td></tr>
-    <tr><th>Dzuhur</th><td id="dzuhur">–</td></tr>
-    <tr><th>Ashar</th><td id="ashar">–</td></tr>
-    <tr><th>Maghrib</th><td id="maghrib">–</td></tr>
-    <tr><th>Isya</th><td id="isya">–</td></tr>
-  </table>
-  <p id="lokasi">Makassar, WITA</p>
-  <div class="countdown" id="countdown">Loading countdown...</div>
+<div id="listPage">
+    <div id="searchBox">
+        <input type="text" id="searchInput" placeholder="Cari surah…">
+    </div>
+    <div id="surahList"></div>
 </div>
 
-<!-- Halaman Tentang -->
-<div id="about-page" class="about-page">
-  <button class="back-btn" onclick="closeAbout()">Kembali</button>
-  <h2>Tentang <span>Al-Qur’an Digital</span></h2>
-  <p>
-   
-  <p><i class="fa-solid fa-user-pen"></i> Pembuat: <strong>Khenenk Digital</strong></p>
-  <hr style="margin:30px 0; border:0; border-top:1px solid rgba(255,255,255,0.2);">
-  <h2><i class="fa-solid fa-circle-info"></i> Cara Tambah ke Layar Utama</h2>
-  <p>Supaya aplikasi ini bisa diakses langsung seperti aplikasi asli, ikuti langkah berikut:</p>
-  <ol>
-    <li><i ></i> Buka aplikasi ini di <b>Google Chrome</b>.</li>
-    <li><i ></i> Tekan <b>titik tiga (⋮)</b> di kanan atas.</li>
-    <li><i ></i> Geser ke bawah, pilih <b>Tambahkan ke layar utama</b>.</li>
-    <li><i ></i> Ikon akan muncul di <b>Home Screen</b> seperti aplikasi. ✅</li>
-  </ol>
-</div>
-</div>
+<div id="surahDetail">
+    <!-- Timer Sleep di atas nama surah -->
+    <div id="sleepTimerBox">
+        <label>Atur Waktu Tidur (Jam : Menit : Detik)</label>
+        <div id="sleepTimerInputs">
+            <input type="number" id="sleepHours" placeholder="0" min="0" value="0">
+            <input type="number" id="sleepMinutes" placeholder="0" min="0" value="0">
+            <input type="number" id="sleepSeconds" placeholder="0" min="0" value="0">
+            <button id="toggleSleepTimer">⏱️ Mulai</button>
+        </div>
+        <span id="sleepTimerDisplay"></span>
+    </div>
 
-<footer>
-  &copy; 2025 Alquran Digital | <a href="#">Privacy Policy</a> | <a href="#">Contact</a>
-</footer>
+    <div id="detailHeader">
+        <button id="backBtn">« Kembali</button>
+        <h2 id="detailTitle"></h2>
+    </div>
+
+    <div id="ayahSearchBox">
+        <input type="number" id="ayahSearchInput" placeholder="Cari ayat…">
+    </div>
+
+    <button id="playBtn">▶️ Putar Audio Surah</button>
+
+    <div id="ayahContainer"></div>
+    <audio id="audioPlayer" controls></audio>
+</div>
 
 <script>
-// Jam digital
-setInterval(()=>{document.getElementById("demo").innerHTML=new Date().toLocaleTimeString();},1000);
+// Header control
+const headerTitle = document.querySelector('.header-title');
+const listPageEl = document.getElementById('listPage');
+const detailEl = document.getElementById('surahDetail');
+const headerCreator = document.querySelector('.header-creator');
 
-// Tab menu
-function showTab(tabId){
-  document.querySelectorAll('.tab-content').forEach(tab=>tab.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
-  window.scrollTo({top: document.getElementById(tabId).offsetTop - 20, behavior:'smooth'});
-}
-function closeTab(){document.querySelectorAll('.tab-content').forEach(tab=>tab.classList.remove('active'));}
+// Timer Sleep
+let sleepTimerInterval = null;
+let sleepActive = false;
+const toggleSleepTimer = document.getElementById('toggleSleepTimer');
+const sleepHours = document.getElementById('sleepHours');
+const sleepMinutes = document.getElementById('sleepMinutes');
+const sleepSeconds = document.getElementById('sleepSeconds');
+const sleepTimerDisplay = document.getElementById('sleepTimerDisplay');
+const audioPlayer = document.getElementById('audioPlayer');
+const playBtn = document.getElementById('playBtn');
 
-// Tentang
-function showAbout(){
-  document.getElementById('about-page').classList.add('active');
-}
-function closeAbout(){
-  document.getElementById('about-page').classList.remove('active');
-}
+function formatTime(h,m,s){return `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;}
 
-// Jadwal sholat Makassar contoh (Oktober – Desember 2025)
-const jadwalSholat={
-"2025-10-01":{Fajr:"04:33",Dhuhr:"11:56",Asr:"14:59",Maghrib:"18:00",Isha:"19:08"},
-"2025-10-02":{Fajr:"04:32",Dhuhr:"11:55",Asr:"14:58",Maghrib:"17:59",Isha:"19:08"},
-"2025-12-31":{Fajr:"04:20",Dhuhr:"11:50",Asr:"14:50",Maghrib:"17:55",Isha:"19:00"}
+toggleSleepTimer.onclick = ()=>{
+    if(!sleepActive){
+        let totalSeconds = parseInt(sleepHours.value)*3600 + parseInt(sleepMinutes.value)*60 + parseInt(sleepSeconds.value);
+        if(isNaN(totalSeconds) || totalSeconds<=0){ alert('Masukkan waktu yang valid!'); return; }
+        sleepActive=true; toggleSleepTimer.classList.add('active'); toggleSleepTimer.textContent='⏹️ Berhenti';
+        sleepTimerDisplay.textContent=`Waktu tersisa: ${formatTime(Math.floor(totalSeconds/3600),Math.floor((totalSeconds%3600)/60),totalSeconds%60)}`;
+        sleepTimerInterval=setInterval(()=>{
+            totalSeconds--;
+            if(totalSeconds<=0){
+                clearInterval(sleepTimerInterval);
+                sleepActive=false;
+                toggleSleepTimer.classList.remove('active');
+                toggleSleepTimer.textContent='⏱️ Mulai';
+                sleepTimerDisplay.textContent='Timer selesai!';
+                audioPlayer.pause();
+                detailEl.style.display='none';
+                listPageEl.style.display='block';
+                headerTitle.classList.remove('hidden');
+                playBtn.textContent='▶️ Putar Audio Surah';
+                playBtn.classList.remove('pause');
+                alert('Waktu tidur selesai. Audio dihentikan.');
+            } else {
+                sleepTimerDisplay.textContent=`Waktu tersisa: ${formatTime(Math.floor(totalSeconds/3600),Math.floor((totalSeconds%3600)/60),totalSeconds%60)}`;
+            }
+        },1000);
+    }else{
+        sleepActive=false; clearInterval(sleepTimerInterval); toggleSleepTimer.classList.remove('active'); toggleSleepTimer.textContent='⏱️ Mulai'; sleepTimerDisplay.textContent='Timer dimatikan';
+    }
 };
 
-function updatePrayerTimes(){
-  const today=new Date().toISOString().split('T')[0];
-  let t=jadwalSholat[today]||jadwalSholat["2025-10-01"];
-  document.getElementById('shubuh').textContent=t.Fajr;
-  document.getElementById('dzuhur').textContent=t.Dhuhr;
-  document.getElementById('ashar').textContent=t.Asr;
-  document.getElementById('maghrib').textContent=t.Maghrib;
-  document.getElementById('isya').textContent=t.Isha;
-  updateCountdown(t);
+// --- Kode asli untuk memuat Surah & audio ---
+const apiBase = 'https://api.alquran.cloud/v1';
+const listEl = document.getElementById('surahList');
+const searchInput = document.getElementById('searchInput');
+const detailTitle = document.getElementById('detailTitle');
+const ayahContainer = document.getElementById('ayahContainer');
+const backBtn = document.getElementById('backBtn');
+const ayahSearchInput = document.getElementById('ayahSearchInput');
+
+let surahList = [], currentSurah=null, currentAyahList=[], currentAyahIndex=0, isPlaying=false;
+
+async function loadSurahList() {
+  try{
+    const res = await fetch(`${apiBase}/surah`);
+    const data = await res.json();
+    surahList = data.data;
+    renderSurahList('');
+  }catch(err){
+    listEl.innerHTML='<p style="text-align:center;color:red;">Gagal memuat daftar surah.</p>';
+  }
+}
+function renderSurahList(filter){
+  listEl.innerHTML='';
+  surahList.filter(s=>s.englishName.toLowerCase().includes(filter)||s.name.includes(filter))
+    .forEach(s=>{
+      const item=document.createElement('div');
+      item.className='surah-item';
+      item.innerHTML=`<div class="surah-num">${s.number}</div>
+      <div class="surah-info"><div><strong>${s.englishName} (${s.name})</strong></div>
+      <div class="surah-meta">${s.revelationType.toUpperCase()}</div></div>`;
+      item.onclick=()=>openSurah(s.number,s.englishName,s.name);
+      listEl.appendChild(item);
+    });
+}
+searchInput.addEventListener('input', e=>renderSurahList(e.target.value.toLowerCase()));
+
+function clearAyahHighlight(){ const active=ayahContainer.querySelector('.ayah.active'); if(active) active.classList.remove('active');}
+function highlightAyah(index){ clearAyahHighlight(); const ayahEl=ayahContainer.querySelector(`.ayah[data-index="${index}"]`); if(ayahEl){ayahEl.classList.add('active'); ayahEl.scrollIntoView({behavior:'smooth',block:'center'});}}
+async function openSurah(num,engName,arabName){
+  currentSurah=num;
+  listPageEl.style.display='none';
+  detailEl.style.display='block';
+  headerTitle.classList.add('hidden'); // hide title
+  detailTitle.textContent=`${engName} (${arabName})`;
+  ayahContainer.innerHTML='<p style="text-align:center;color:#555;">Memuat...</p>';
+  currentAyahList=[]; currentAyahIndex=0; isPlaying=false; ayahSearchInput.value=''; playBtn.textContent='▶️ Putar Audio Surah'; playBtn.classList.remove('pause'); clearAyahHighlight();
+  try{
+    const [arRes,idRes]=await Promise.all([fetch(`${apiBase}/surah/${num}/quran-uthmani`), fetch(`${apiBase}/surah/${num}/id.indonesian`)]);
+    const arData=(await arRes.json()).data;
+    const idData=(await idRes.json()).data;
+    ayahContainer.innerHTML='';
+    currentAyahList=arData.ayahs.map(a=>a.number);
+    arData.ayahs.forEach((a,i)=>{
+      let arabText=a.text.replace(/^بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\s*/u,'');
+      const div=document.createElement('div'); div.className='ayah'; div.dataset.index=i; div.dataset.global=a.number;
+      div.innerHTML=`<div class="ayah-num">${a.numberInSurah}</div><div class="ayah-ar">${arabText}</div><div class="ayah-id">${idData.ayahs[i].text}</div>`;
+      div.onclick=()=>playFromAyah(i);
+      ayahContainer.appendChild(div);
+    });
+  }catch(err){ayahContainer.innerHTML='<p style="text-align:center;color:red;">Gagal memuat data surah.</p>';}
 }
 
-function updateCountdown(times){
-  const now=new Date();
-  const prayers=["Fajr","Dhuhr","Asr","Maghrib","Isha"];
-  let nextPrayer=null,nextName="";
-  for(let p of prayers){
-    let [h,m]=times[p].split(":").map(Number);
-    let pDate=new Date(now.getFullYear(),now.getMonth(),now.getDate(),h,m,0);
-    if(pDate>now){nextPrayer=pDate;nextName=p;break;}
-  }
-  if(!nextPrayer){
-    let [h,m]=times["Fajr"].split(":").map(Number);
-    nextPrayer=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,h,m,0);nextName="Fajr";
-  }
-  let diff=nextPrayer-now;
-  let h=Math.floor(diff/1000/3600);
-  let m=Math.floor((diff/1000%3600)/60);
-  let s=Math.floor((diff/1000)%60);
-  document.getElementById('countdown').textContent=`Waktu ${nextName} berikutnya: ${h} jam ${m} menit ${s} detik`;
+function playFromAyah(index){ if(isPlaying) audioPlayer.pause(); currentAyahIndex=index; playCurrentAyah(); }
+function playCurrentAyah(){
+    if(currentAyahIndex>=currentAyahList.length){ isPlaying=false; playBtn.classList.remove('pause'); playBtn.textContent='▶️ Putar Audio Surah'; clearAyahHighlight(); return; }
+    const globalAyahNum=currentAyahList[currentAyahIndex];
+    audioPlayer.src=`https://cdn.islamic.network/quran/audio/128/ar.alafasy/${globalAyahNum}.mp3`;
+    audioPlayer.play(); isPlaying=true; playBtn.textContent='⏸️ Jeda Audio Surah'; playBtn.classList.add('pause'); highlightAyah(currentAyahIndex);
 }
 
-// Update setiap detik
-setInterval(updatePrayerTimes,1000);
-updatePrayerTimes();
+playBtn.onclick=()=>{if(!currentSurah) return; if(isPlaying){audioPlayer.pause(); isPlaying=false; playBtn.textContent='▶️ Putar Audio Surah'; playBtn.classList.remove('pause');}else{if(audioPlayer.paused&&currentAyahIndex===0) playCurrentAyah(); else {audioPlayer.play(); isPlaying=true; playBtn.textContent='⏸️ Jeda Audio Surah'; playBtn.classList.add('pause');}}};
+audioPlayer.addEventListener('ended',()=>{if(isPlaying){currentAyahIndex++; playCurrentAyah();}});
+backBtn.onclick=()=>{detailEl.style.display='none'; listPage.style.display='block'; audioPlayer.pause(); isPlaying=false; clearAyahHighlight(); playBtn.textContent='▶️ Putar Audio Surah'; playBtn.classList.remove('pause');};
+ayahSearchInput.addEventListener('input',(e)=>{const searchText=e.target.value.trim();const ayahElements=ayahContainer.querySelectorAll('.ayah'); clearAyahHighlight(); if(searchText==='') return; const foundAyah=Array.from(ayahElements).find(ayahEl=>ayahEl.querySelector('.ayah-num').textContent.trim()===searchText); if(foundAyah){const index=parseInt(foundAyah.dataset.index,10); highlightAyah(index); foundAyah.scrollIntoView({behavior:'smooth',block:'center'});}});
+loadSurahList();
 </script>
 
 </body>
