@@ -57,19 +57,19 @@ header {
 .hidden { display:none !important; }
 
 #searchBox, #ayahSearchBox {
-    margin: 20px 15px;
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 12px 18px;
+    margin: 10px 15px;              /* Margin lebih kecil */
+    background: rgba(255,255,255,0.08);  /* Latar lebih tipis */
+    border-radius: 8px;             /* Sudut lebih kecil */
+    padding: 6px 12px;              /* Padding lebih kecil */
     display: flex;
 }
 
-#searchBox input, #ayahSearchBox input {
+#ayahSearchBox input {
     flex:1;
     border:none;
     outline:none;
-    font-size:1rem;
-    padding:0;
+    font-size:0.85rem;              /* Teks lebih kecil */
+    padding:4px 6px;                /* Tinggi input lebih kecil */
     background:transparent;
     color: var(--text-color);
 }
@@ -200,7 +200,7 @@ header {
 
 #playBtn {
     margin:0 auto 15px auto;
-    padding:10px 20px;
+    padding:6px 12px;
     background: var(--accent-color);
     color:#000;
     border:none;
@@ -227,15 +227,15 @@ header {
     background:none;
     border:none;
     color:#fff;
-    font-size:0.5rem;
+    font-size:0.7rem;
     line-height:1;
     cursor:pointer;
     padding:0;
     position:absolute;
-    left:15px;
+    left:0px;
     top:50%;
     transform:translateY(-50%);
-    font-weight:700;
+    font-weight:900;
     opacity:0.9;
     transition:opacity 0.2s;
 }
@@ -293,7 +293,7 @@ header {
     </div>
 
     <div id="ayahSearchBox">
-        <input type="number" id="ayahSearchInput" placeholder="Cari ayat…">
+        <input type="number" id="ayahSearchInput" placeholder="Cari ayat (misal: 5)">
     </div>
 
     <button id="playBtn">▶️ Putar Audio Surah</button>
